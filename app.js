@@ -5,8 +5,8 @@ const disconnectButton = document.querySelector('#disconnectButton')
 // Array associated with the ble services and characteristics used
 //const BLE_SERVICES = ['heart_rate']
 //const BLE_CHARACTERISTICS = ['heart_rate_measurement']
-const BLE_SERVICES = [0x180D]
-const BLE_CHARACTERISTICS = [0x2A37]
+const BLE_SERVICES = [0x9800]
+const BLE_CHARACTERISTICS = [0x9801, 0x9802]
 const N_SERVICES = BLE_SERVICES.length
 const N_CHARACTERISTICS = BLE_CHARACTERISTICS.length
 
@@ -16,8 +16,8 @@ const dataSelectorArray = [
 
     voltageSelectors = [
         voltage24 = document.querySelector('#v24'),
-        /*voltage12  = document.querySelector('#v12'),
-        voltage6   = document.querySelector('#v6'),
+        voltage12  = document.querySelector('#v12'),
+        /*voltage6   = document.querySelector('#v6'),
         voltage5   = document.querySelector('#v5'),
         voltage3_3 = document.querySelector('#v3_3')*/
     ]/*,
