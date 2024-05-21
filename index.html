@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Web Bluetooth control">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Web BLE</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="containerLogo">
+            <div class="logo">AlphaEdge BLE Web Dashboard</div>
+            <img src="LOGO-RM.png" width="80" height="62">
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div class="container">
+            <div class="boxStyle">
+                <header class="title">Alimentazioni</header>
+                <div class="flexboxContainerAL">
+
+                    <div class="innerContainer">
+                        <div>24 V: </div>
+                        <div class="boxBorder" id="v24"> --- </div>
+                        <div>V</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>12 V: </div>
+                        <div class="boxBorder" id="v12"> --- </div>
+                        <div>V</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>6 V: </div>
+                        <div class="boxBorder" id="v6"> --- </div>
+                        <div>V</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>5 V: </div>
+                        <div class="boxBorder" id="v5"> --- </div>
+                        <div>V</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>3.3 V: </div>
+                        <div class="boxBorder" id="v3_3"> --- </div>
+                        <div>V</div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="boxStyle">
+                
+                <header class="title">Sensori di Temperatura</header>
+                <div class="flexboxContainerTS">
+
+                    <div class="innerContainer">
+                        <div>T. Core: </div>
+                        <div class="boxBorder" id="tCore"> --- </div>
+                        <div>°C</div>
+                    </div>
+                    
+                    <div class="innerContainer">
+                        <div>T. Sense 1: </div>
+                        <div class="boxBorder" id="tSense1"> --- </div>
+                        <div>°C</div>
+                        
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>T. Sense 2: </div>
+                        <div class="boxBorder" id="tSense2"> --- </div>
+                        <div>°C</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="boxStyle">
+                <header class="title">Termocoppie</header>
+                <div class="flexboxContainerTC">
+
+                    <div class="innerContainer">
+                        <div>TC 1: </div>
+                        <div class="boxBorder" id="tc1"> --- </div>
+                        <div>°C</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>TC 2: </div>
+                        <div class="boxBorder" id="tc2"> --- </div>
+                        <div style="padding: 0 1px;">°C</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>TC 3: </div>
+                        <div class="boxBorder" id="tc3"> --- </div>
+                        <div style="padding: 0 1px;">°C</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>TC 4: </div>
+                        <div class="boxBorder" id="tc4"> --- </div>
+                        <div style="padding: 0 1px;">°C</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>TC 5: </div>
+                        <div class="boxBorder" id="tc5"> --- </div>
+                        <div style="padding: 0 1px;">°C</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>TC 6: </div>
+                        <div class="boxBorder" id="tc6"> --- </div>
+                        <div style="padding: 0 1px;">°C</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="boxStyle">
+                <header class="title">Sensori di Pressione</header>
+                <div class="flexboxContainerPR">
+
+                    <div class="innerContainer">
+                        <div style="padding: 0 1px;">PR 1: </div>
+                        <div class="boxBorder" id="pr1"> --- </div>
+                        <div>daPa</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div class="boxBorder"> --- </div>
+                        <div style="padding: 0 1px;">mA</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div style="padding: 0 0px;">PR 2: </div>
+                        <div class="boxBorder" id="pr2"> --- </div>
+                        <div style="padding: 0 0px;">daPa</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div class="boxBorder"> --- </div>
+                        <div style="padding: 0 1px;">mA</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div style="padding: 0 0px;">PR 3: </div>
+                        <div class="boxBorder" id="pr3"> --- </div>
+                        <div style="padding: 0 0px;">daPa</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div class="boxBorder"> --- </div>
+                        <div style="padding: 0 1px;">mA</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>PR 4: </div>
+                        <div class="boxBorder" id="pr4"> --- </div>
+                        <div style="padding: 0 0px;">daPa</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div class="boxBorder"> --- </div>
+                        <div style="padding: 0 1px;">mA</div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="boxStyle">
+                <header class="title">Sonde Lambda</header>
+                <div class="flexboxContainer">
+
+                    <div class="innerContainer">
+                        <div>CH 1: </div>
+                        <div class="boxBorder" id="ch1"> --- </div>
+                        <div>%</div>
+                    </div>
+
+                    <div class="innerContainer">
+                        <div>CH 2: </div>
+                        <div class="boxBorder" id="ch2"> --- </div>
+                        <div>%</div>
+                    </div>
+                </div>
+            </div>
+            <button class="buttonStyle" type="button" id="connectButton">Connect</button>
+            <button class="buttonStyle" type="button" id="disconnectButton">Disconnect</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
