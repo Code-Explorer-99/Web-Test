@@ -52,7 +52,7 @@ const dataSelectorArray = [
 
 const valueHandlerArray = [
 
-    voltageHandler = [handle_uint8]
+    voltageHandler = [handle_uint8, handle_uint8]
 
 ] // it's an array of array defining the type of data of the ble characteristic
 
